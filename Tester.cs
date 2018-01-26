@@ -2,6 +2,19 @@ using System;
 
 namespace DP {
     public class Tester {
+        public static void TemplateTest () {
+            Console.WriteLine ("学生甲抄的试卷：");
+            TestPaper studentA = new TestPaperA ();
+            studentA.Question1 ();
+            studentA.Question2 ();
+            studentA.Question3 ();
+            Console.WriteLine ("学生乙抄的试卷：");
+            TestPaper studentB = new TestPaperB ();
+            studentB.Question1 ();
+            studentB.Question2 ();
+            studentB.Question3 ();
+        }
+
         public static void DecoratorTest () {
             Person xc = new Person ("Little");
             Sneakers sk = new Sneakers ();
