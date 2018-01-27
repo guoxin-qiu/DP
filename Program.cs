@@ -3,7 +3,7 @@
 namespace DP {
     class Program {
         static void Main (string[] args) {
-            Tester.TemplateTest ();
+            Tester.ObserverTest ();
 
             Console.WriteLine ("---------over---------");
         }

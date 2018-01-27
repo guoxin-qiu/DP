@@ -2,6 +2,17 @@ using System;
 
 namespace DP {
     public class Tester {
+        public static void ObserverTest () {
+            Boss huhansan = new Boss ();
+            StockObserver tongshiA = new StockObserver ("A", huhansan);
+            NBAObserver tongshiB = new NBAObserver ("B", huhansan);
+
+            huhansan.Update += tongshiA.CloseStockMarket;
+            huhansan.Update += tongshiB.CloseNBADirectSeeding;
+
+            huhansan.SubjectState = "我胡汉三回来了";
+            huhansan.Notify ();
+        }
         public static void TemplateTest () {
             Console.WriteLine ("学生甲抄的试卷：");
             TestPaper studentA = new TestPaperA ();
